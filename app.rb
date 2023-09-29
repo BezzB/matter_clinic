@@ -29,3 +29,4 @@ morse_code_decoder = MorseCode.new()
 message_in_bottle = "-- -.--   -. .- -- ."
 decoded_message = morse_code_decoder.decode_msg(message_in_bottle)
 puts decoded_message
+
