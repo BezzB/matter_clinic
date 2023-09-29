@@ -1,5 +1,5 @@
 class MorseCode
-    MORSE_CODE = {
+  MORSE_CODE = {
     ".-" => "A", "-..." => "B", "-.-." => "C", "-.." => "D", "." => "E",
     "..-." => "F", "--." => "G", "...." => "H", ".." => "I", ".---" => "J",
     "-.-" => "K", ".-.." => "L", "--" => "M", "-." => "N", "---" => "O",
@@ -12,11 +12,13 @@ class MorseCode
   def decode_char(morse_code)
     MORSE_CODE[morse_code]
   end
+
   def decode_word(morse_word)
     return morse_word.split(" ").map { |char| decode_char(char) }.join
   end
+
   def decode_msg(morse_msg)
-   return morse_msg.split("   ").map {|word| decode_char(word) }.join(" ")
+    return morse_msg.split("   ").map { |word| decode_char(word) }.join(" ")
   end
 end
 
